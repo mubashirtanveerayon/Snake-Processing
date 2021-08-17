@@ -40,6 +40,11 @@ class Snake {
 
   void show() {
     for (int i=0;i<total;i++) {
+      if(i==0){
+        fill(0,255,0);
+      }else{
+       fill(20,180,20); 
+      }
       rect(body[i].x, body[i].y, unit, unit);
     }
   }
@@ -63,6 +68,9 @@ class Snake {
   }
   
   void die(){
+    for(int i=1;i<total;i++){
+     body[i]=null; 
+    }
     total=1;
     location.mult(0);
   }

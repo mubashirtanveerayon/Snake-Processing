@@ -2,7 +2,7 @@ Snake snake;
 Food food;
 int unit;
 void setup(){
-  size(400,400);
+  size(500,500);
   frameRate(10);
   unit = 20;
   snake = new Snake(unit,0,0);
@@ -11,7 +11,6 @@ void setup(){
 
 void draw(){
   background(0);
-  fill(255);
  if(snake.eat(food)){
    snake.grow();
    food.generate();
@@ -28,6 +27,7 @@ void draw(){
 }
 
 void showGrid(){
+  stroke(255);
   int unitw=(int)width/unit;
   int unith=(int)height/unit;
  for(int i=0;i<unitw;i++){
